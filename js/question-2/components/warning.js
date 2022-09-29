@@ -1,6 +1,12 @@
-import { appendToParent, createHtmlElement } from "../util/elements.js";
+import { createHtmlElement } from "../util/createHtmlElement.js";
 
+/**
+ * Creates warning message with appropriate styling and appends to parent
+ * @param {String} status
+ * @param {String} content
+ * @param {HTMLElement} parent
+ */
 export const createWarning = (status, content, parent) => {
   const container = createHtmlElement("div", ["alert", status], content);
-  appendToParent([container], parent);
+  parent.appendChild(container);
 };

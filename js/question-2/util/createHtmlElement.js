@@ -1,3 +1,10 @@
+/**
+ * Creates an html element, adds classes if any, and content if any.
+ * @param {String} tag
+ * @param {String[] | String} classes
+ * @param {String} content
+ * @returns {HTMLElement} html element
+ */
 export const createHtmlElement = (tag, classes, content) => {
   const element = document.createElement(tag);
   if (classes) {
@@ -10,14 +17,4 @@ export const createHtmlElement = (tag, classes, content) => {
   }
 
   return element;
-};
-
-export const appendToParent = (children, parent) => {
-  if (Array.isArray(children)) {
-    for (const child of children) {
-      parent.appendChild(child);
-    }
-  } else {
-    parent.appendChild(children);
-  }
 };
