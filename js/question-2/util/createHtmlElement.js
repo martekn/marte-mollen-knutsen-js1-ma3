@@ -8,8 +8,10 @@
 export const createHtmlElement = (tag, classes, content) => {
   const element = document.createElement(tag);
   if (classes) {
-    for (const className of classes) {
-      element.classList.add(className);
+    if (Array.isArray(classes)) {
+      element.classList.add(...classes);
+    } else {
+      element.classList.add(classes);
     }
   }
   if (content) {

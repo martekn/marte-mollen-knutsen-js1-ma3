@@ -6,7 +6,7 @@ import { createHtmlElement } from "../util/createHtmlElement.js";
  * @param {String} content
  * @param {HTMLElement} parent
  */
-export const createWarning = (status, content, parent) => {
+export const createAlert = (status, content, parent) => {
   const container = createHtmlElement("div", ["alert", status], content);
   parent.appendChild(container);
 };

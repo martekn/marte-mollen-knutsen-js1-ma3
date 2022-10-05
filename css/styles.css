@@ -1,15 +1,7 @@
-html {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  -webkit-box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -32,6 +24,7 @@ main {
   max-width: 1500px;
 }
 
+/** Card */
 .card {
   padding: 20px 40px;
   display: grid;
@@ -60,14 +53,7 @@ h2 {
   margin-right: 6px;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+/** Loader */
 .loader {
   border-radius: 50%;
   border: 9px solid transparent;
@@ -80,6 +66,16 @@ h2 {
   justify-self: center;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/** Alert */
 .alert {
   background-color: #161616;
   border: 2px solid #000000;
